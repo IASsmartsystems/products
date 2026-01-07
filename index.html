@@ -21,13 +21,13 @@
   </header>
 
   <!-- HOME -->
-  <section id="home" class="section hero">
+  <section id="home" class="section hero bg-main">
     <h1>Welcome to IAS</h1>
     <p>Innovative Solutions. Advanced Systems.</p>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
+  <section id="about" class="section bg-alt">
     <h2>About Us</h2>
     <p>
       IAS is a technology-focused company delivering modern and scalable solutions.
@@ -35,17 +35,90 @@
   </section>
 
   <!-- SERVICES -->
-  <section id="services" class="section">
-    <h2>Services</h2>
-    <ul>
-      <li>Consulting</li>
-      <li>System Integration</li>
-      <li>Custom Development</li>
-    </ul>
-  </section>
+   <div id="serviceModal" class="modal">
+  <div class="modal-content animate-modal service-modal">
+    <span class="close" id="serviceClose">&times;</span>
+
+    <h2 id="serviceTitle"></h2>
+    <p id="serviceDescription"></p>
+
+    <div class="slideshow">
+      <button class="slide-btn left" id="prevSlide">&#10094;</button>
+      <img id="serviceImage" src="" alt="Service image">
+      <button class="slide-btn right" id="nextSlide">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+
+<section id="services" class="section bg-main">
+  <h2>Services</h2>
+
+  <div class="services-grid">
+
+   
+  <!----FIRST SERVICE --->
+  <div class="service-card"
+  data-title="Home Automation"
+  data-description="Smart home solutions including lighting, security, and automation."
+  data-images='["assets/services/home1.jpg","assets/services/home2.jpg"]'>
+
+  <div class="service-image">
+    <img src="assets/services/home-thumb.jpg" alt="Home Automation">
+  </div>
+
+  <h3>Home Automation</h3>
+  <span class="service-subtitle">Smart, connected living</span>
+
+  <p class="service-text">
+    Modern automation solutions designed to enhance comfort, security, and efficiency.
+  </p>
+
+</div>
+<!----SECOND SERVICE-->
+<div class="service-card"
+  data-title="Home Automation"
+  data-description="Smart home solutions including lighting, security, and automation."
+  data-images='["assets/services/home1.jpg","assets/services/home2.jpg"]'>
+
+  <div class="service-image">
+    <img src="assets/services/home-thumb1.jpg" alt="Home Automation">
+  </div>
+
+  <h3>Consultation</h3>
+  <span class="service-subtitle">Smart, connected living</span>
+
+  <p class="service-text">
+    Professional consultation services that help plan, design, and optimize solutions tailored to your specific needs.
+  </p>
+
+</div>
+
+<!----THIRD SERVICE-->
+<div class="service-card"
+  data-title="Home Automation"
+  data-description="Smart home solutions including lighting, security, and automation."
+  data-images='["assets/services/home1.jpg","assets/services/home2.jpg"]'>
+
+  <div class="service-image">
+    <img src="assets/services/home-thumb2.jpg" alt="Home Automation">
+  </div>
+
+  <h3>Construction</h3>
+  <span class="service-subtitle">Smart, connected living</span>
+
+  <p class="service-text">
+    Reliable construction services focused on quality workmanship, efficiency, and long-lasting results.
+  </p>
+
+</div>
+
+  </div>
+</section>
+
 
   <!-- PRODUCTS -->
-  <section id="products" class="section">
+  <section id="products" class="section bg-accent">
   <h2>Products</h2>
 
   <div class="products-grid">
@@ -56,7 +129,7 @@
       data-description="IAS WiFi Socket is a smart power solution that allows you to control and monitor your electrical devices remotely using your smartphone. With easy installation and reliable connectivity, it helps you manage energy usage, improve convenience, and enhance safety at home or in the office."
       data-link="products/product1/">
       <h3>IAS WiFi Socket</h3>
-      <p>High-performance business solution</p>
+      <p>High-performance and comfort living</p>
     </div>
 
     <!-- PRODUCT 2 -->
@@ -64,7 +137,7 @@
       data-title="IAS Product Two"
       data-description="An intelligent platform for automation and analytics."
       data-link="products/product2.html">
-      <h3>IAS Product Two</h3>
+      <h3>IAS Perimeter intrusion</h3>
       <p>Automation & analytics platform</p>
     </div>
 
@@ -99,6 +172,55 @@
     <a id="modalLink" class="btn">Read More</a>
   </div>
 </div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-overlay"></div>
+
+  <div class="contact-container">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-info">
+      <h2>GET CONNECTED</h2>
+
+      <p>
+        Innovative Solutions. Advanced Systems. (IAS) is the go-to provider for all home automations services.
+      </p>
+
+      <div class="contact-details">
+        <h4>Address</h4>
+        <p>Lagos, Nigeria</p>
+
+        <h4>Mobile</h4>
+        <p>08106124555</p>
+
+        <h4>Email</h4>
+        <p>fkunzy@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-form">
+      <h2>HAVE QUESTIONS?</h2>
+
+      <form action="https://formspree.io/f/xpqwgnbe" method="POST">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="hidden" name="_subject" value="New IAS Contact Request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_redirect" value="https://yourusername.github.io/products">
+
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">SEND MESSAGE</button>
+
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
 
 <script src="IAS.js"></script>
 </body>
