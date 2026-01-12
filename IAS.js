@@ -13,7 +13,24 @@ document.querySelectorAll(".product-card").forEach(card => {
   });
 });
 
-closeBtn.onclick = () => modal.style.display = "none";
+// Close modal when X is clicked
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("productModal");
+  const closeBtn = modal.querySelector(".close");
+
+  // Close when X is clicked
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Close when clicking outside modal content
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
 
 window.onclick = (e) => {
   if (e.target === modal) modal.style.display = "none";
@@ -136,4 +153,5 @@ window.addEventListener("click", (e) => {
     stopSlideshow();
   }
 });
+
 
